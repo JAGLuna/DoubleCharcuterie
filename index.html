@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Charcuterie Board Order Form</title>
+<style>
+  body { font-family: Arial, sans-serif; padding: 20px; background-color: #f9f9f9; }
+  h2 { color: #333; }
+  form { background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+  label { display: block; margin: 10px 0; }
+  input, select { width: 100%; padding: 8px; margin-top: 5px; border-radius: 4px; border: 1px solid #ddd; box-sizing: border-box; }
+  button { background-color: #007bff; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; }
+  button:hover { background-color: #0056b3; }
+</style>
+</head>
+<body>
+<h2>Order Your Charcuterie Board</h2>
+<form id="orderForm">
+  <label>Email:
+    <input type="email" name="email" required>
+  </label>
+  <label>Full Name:
+    <input type="text" name="fullname" required>
+  </label>
+  <label>Phone Number:
+    <input type="tel" name="phone" required>
+  </label>
+  <label>Date of Event:
+    <input type="date" name="eventdate" required>
+  </label>
+  <label>Event Start Time:
+    <input type="time" name="eventtime" required>
+  </label>
+  <label>Full Delivery Address:
+    <input type="text" name="address" required>
+  </label>
+  <label>Preferred Contact Method:
+    <select name="contactmethod" required>
+      <option value="email">Email</option>
+      <option value="phone">Phone</option>
+    </select>
+  </label>
+  <label>Type of Boards:
+    <select name="boardtype" required>
+      <option value="classic">Classic</option>
+      <option value="vegan">Vegan</option>
+      <option value="gluten-free">Gluten-Free</option>
+    </select>
+  </label>
+  <label>Number of Guests:
+    <input type="number" name="guests" min="1" required>
+  </label>
+  <label>Design Preference:
+    <select name="designpreference" required>
+      <option value="elegant">Elegant</option>
+      <option value="rustic">Rustic</option>
+      <option value="modern">Modern</option>
+    </select>
+  </label>
+  <button type="submit">Submit Order</button>
+</form>
+<script>
+document.getElementById('orderForm').onsubmit = function(e) {
+  e.preventDefault(); // Prevent the default form submission
+  alert('Thank you for your order! We will contact you shortly.');
+  // Implement further form submission handling (e.g., sending data to a server) here
+};
+</script>
+</body>
+</html>
